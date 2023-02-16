@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    platform: linux/arm64
+    container_name: channel_db
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_general_ci
+    restart: always
+    ports:
+      - "3308:3306"
+    volumes:
+      - channel_mysql:/var/lib/mysql
+    env_file:
+      - env/.env.local
+
+volumes:
+    channel_mysql:
