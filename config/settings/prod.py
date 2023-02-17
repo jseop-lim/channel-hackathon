@@ -14,6 +14,8 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
+    'channel.jseoplim.com',
+    '13.209.38.29',
 ]
 
 
