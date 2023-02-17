@@ -36,9 +36,11 @@ class DailyChat(models.Model):
 
     raw_text = models.TextField(
         '원시 텍스트',
+        blank=True,
     )
     summary_text = models.TextField(
         '요약 텍스트',
+        blank=True,
     )
     level = models.IntegerField(
         '수준',
