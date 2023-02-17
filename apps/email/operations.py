@@ -12,7 +12,7 @@ def send_mail_from_chat_room(
     chat_room = ChatRoom.objects.get(id=chat_room_id)
     send_mail(
         subject=chat_room.name,
-        message=''.join([f'- {daily_chat.summary_text}\n' for daily_chat in chat_room.daily_chats.all()]),
+        message=''.join([f'{daily_chat.created_at:%Y-%m-%d (%a)} 요약\n{daily_chat.summary_text}\n' for daily_chat in chat_room.daily_chats.all()]),
         from_email='jseoplim2@gmail.com',
         recipient_list=[chat_room.user.email],
         fail_silently=False,
