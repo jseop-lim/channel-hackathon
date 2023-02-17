@@ -13,6 +13,6 @@ class EmailService:
             subject=daily_chat.chat_room.name,
             message=daily_chat.summary_text,
             from_email='jseoplim2@gmail.com',
-            recipient_list=[DailyChat.chat_room.user.email],
+            recipient_list=[daily_chat.chat_room.user.email],
             fail_silently=False,
         )
