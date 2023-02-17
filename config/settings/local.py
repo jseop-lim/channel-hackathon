@@ -23,3 +23,8 @@ DATABASES = {
         conn_max_age=env.int('CONN_MAX_AGE', default=600),
     )
 }
+
+
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
