@@ -18,6 +18,13 @@ ALLOWED_HOSTS = [
     '13.209.38.29',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://channel.jseoplim.com',
+    'http://127.0.0.1:3000',
+    'http://localhost:3000',
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 STATIC_ROOT = BASE_DIR / 'static/'
 STATICFILES_DIRS = []
